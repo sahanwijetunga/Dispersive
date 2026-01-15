@@ -33,12 +33,6 @@ set_option autoImplicit false
 
 noncomputable section
 
-/-
-Checking definitions
--/
-#check iteratedDeriv
-#check AnalyticOn
-#check AnalyticAt
 
 /-
 Recursive definition of the functions $F_n$ used in the Cauchy-Kowalevski proof.
@@ -195,11 +189,6 @@ Candidate solution $u$ defined as a power series.
 open Set Filter BigOperators
 
 noncomputable def u_candidate (F : ℝ → ℝ) (x : ℝ) : ℝ := ∑' n, cauchy_power_series_coeff F n * x ^ n
-
-/-
-Checking availability of FormalMultilinearSeries.ofScalars
--/
-#check FormalMultilinearSeries.ofScalars
 
 /-
 Formal power series for the candidate solution.
